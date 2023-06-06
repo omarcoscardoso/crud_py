@@ -1,18 +1,17 @@
 version: '3.7'
 
-services: 
+services:
 
   db:
-    image: mysql:8.0
-    restart: always
-    command: --innodb-use-native-aio=0
+    build:
+      context: ./
+      dockerfile: Dockerfile
     container_name: db_crud
     tty: true
-    volumes: 
-      - ./db_mysql:/var/lib/mysql
-    environment: 
-      - MYSQL_DATABASE=NOME_DA_BASE
-      - MYSQL_ROOT_PASSWORD=SENHA
+    volumes:
+      - type: bind
+        source: ./db_mysql
+        target: /var/lib/mysql
     ports:
       - "3306:3306"
     expose:
@@ -22,4 +21,6 @@ services:
 
 networks: 
   default:
-    driver: bridge   
+    driver: bridge
+
+    

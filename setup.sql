@@ -5,3 +5,11 @@ CREATE TABLE `tbl_user` (
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `tbl_user`
+  (`name`,`email`)
+VALUES 
+  ('João Silva', 'joao@crud.com'),
+  ('Carina Oliveira', 'cariliv@ter.com'),
+  ('Dominic de Sá', 'domsa@crud.com'),
+  ('Dimitry Regreto', 'regreto@crud.com');
