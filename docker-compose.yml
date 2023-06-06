@@ -1,0 +1,25 @@
+version: '3.7'
+
+services: 
+
+  db:
+    image: mysql:8.0
+    restart: always
+    command: --innodb-use-native-aio=0
+    container_name: db_crud
+    tty: true
+    volumes: 
+      - ./db_mysql:/var/lib/mysql
+    environment: 
+      - MYSQL_DATABASE=NOME_DA_BASE
+      - MYSQL_ROOT_PASSWORD=SENHA
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    networks: 
+      - default
+
+networks: 
+  default:
+    driver: bridge   
