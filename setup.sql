@@ -9,7 +9,7 @@ CREATE TABLE `tbl_user` (
 INSERT INTO `tbl_user`
   (`name`,`email`)
 VALUES 
-  ('João Silva', 'joao@crud.com'),
+  ('Jacinto Silva', 'joao@crud.com'),
   ('Carina Oliveira', 'cariliv@ter.com'),
-  ('Dominic de Sá', 'domsa@crud.com'),
+  ('Dominic Souza', 'domsa@crud.com'),
   ('Dimitry Regreto', 'regreto@crud.com');
